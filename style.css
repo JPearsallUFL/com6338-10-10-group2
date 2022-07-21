@@ -1,3 +1,5 @@
+/* Universal Styling */
+
 :root {
   --gray: #544E4E;
   --red: #863234;
@@ -10,7 +12,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-size: 1.1rem;
 }
 
 h1 { 
@@ -60,7 +61,8 @@ p {
   line-height: 15.4px;
 }
 
-nav {
+/* Header & Navigation Styling */
+nav, section > div {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -70,27 +72,36 @@ header {
   background-color: var(--gray);
   position: sticky;
   display: flex;
-  flex-wrap: wrap;
-  min-width: 300px;
-  padding: 20px 0;
-  align-items: center;
-  justify-content: space-between;
-  max-height: 100px;
 }
 
 header ul {
   margin: 0;
-  padding: 20px 0;
+  padding: 30px 0;
   display: flex;
   list-style: none;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 header ul li {
   margin-right: 48px;
-  font-weight: 350;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
+} 
+
+/* Banner Styling */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  height: 650px;
+  background-image: url('/crafty_hop_assets/home-beer.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
+/* Button Styling */
 button {
   background-color: var(--yellow);
   border: none;
@@ -103,10 +114,6 @@ button {
   transition: 100ms;
 }
 
-button:hover, button:focus {
-  background-color: var(--red);
-}
-
 a {
   font-family: "Monsterrat", sans-serif; 
   text-decoration: none;
@@ -115,25 +122,16 @@ a {
 
 a:hover, a:focus {
   text-decoration: underline;
+  color: var(--beige);
 }
 
 .hop-btn {
   display: flex;
-  padding: 12px 24px 24px;
+  padding: 10px 20px;
+  display: none;
 }
 
-.banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 1000px;
-  background-image: url('/crafty_hop_assets/home-beer.jpg');
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: overlay;
-}
-
+/* Footer Styling */
 footer {
   background-color: var(--gray);
   padding: 10px 0;
@@ -144,41 +142,36 @@ footer {
   color: var(--gold);
 }
 
-
+/* Tablet Styling */
 @media screen and (max-width: 1300px) {
-  .banner {
-    height: 400px;
+  .banner img {
+    height: auto;
+    max-width: 100%;
   }
+  
+  .hop-btn {
+    display: block;
+  }
+
   nav > ul {
-    justify-content: space-between;
+    display: none
   }
+
   nav > ul > li {
     margin-right: 0;
   }
-  section div {
-    justify-content: center;
-  }
-  section div #bob {
-    margin-left: 0;
-  }
-  section div div {
-    max-width: 95%;
-  }
-  section div div button {
-    display: block;
-    margin: auto;
-  }
-  section div div h2 {
-    text-align: center;
-  }
-  section div:first-of-type img {
-    order: -1;
+
+  p {
+    font-size: 10px;
   }
 }
+ 
 
+/* Mobile Styling */
 @media screen and (max-width: 800px) {
   .banner img {
-    max-width: 300px;
+    height: auto;
+    max-width: 100%;
   }
   .hop-btn {
     display: block;
@@ -214,8 +207,13 @@ footer {
   ul.hop-menu li:last-child {
     padding-bottom: 24px;
   }
+
   footer > img {
     max-width: 300px;
+  }
+
+  p {
+    font-size: 8px;
   }
 }
 
