@@ -233,3 +233,47 @@ footer {
     opacity: 1;
   }
 }
+
+/*About Styling*/
+.container .text {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 20%;
+  width: 70%;
+  text-align: center;
+  color: white;
+  font-family: "Playfair Display"; 
+  font-weight: 700; 
+  line-height: 23px; 
+}
+
+.about-top h1 {
+  text-align: center;
+  color: white;
+  font-family: "Playfair Display"; 
+  font-size: 100px; 
+  font-weight: 700; 
+  line-height: 23px; 
+}
+
+.about-bottom p {
+  font-family: "Monsterrat", sans-serif; 
+  font-weight: 350;
+  margin-right: auto;
+  margin-left: 5%;
+  width: 70%;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  line-height: 1.5em;
+}
+
+.hop-red {
+  position: relative;
+  top: -50px;
+  margin-right: 90px;
+  float: right;
+}
