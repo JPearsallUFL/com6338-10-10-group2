@@ -14,57 +14,46 @@ html, body {
   padding: 0;
 }
 
-h1,h2,h3,h4,p {
-  font-style: normal; 
-  font-variant: normal; 
-}
-
-h2,h3,h4,p {
-  font-family: "Monsterrat", sans-serif; 
-  font-weight: 350;
-  line-height: 15.4px;
-
-}
-h2,h3 {
-  text-transform: uppercase;
-}
-
-h1,h2,h3,h4,p {
-  font-style: normal; 
-  font-variant: normal; 
-}
-
-h2,h3,h4,p {
-  font-family: "Monsterrat", sans-serif; 
-  font-weight: 350;
-  line-height: 15.4px;
-
-}
-h2,h3 {
-  text-transform: uppercase;
-}
-
 h1 { 
-  font-family: "Playfair Display"; 
-  font-size: 23px; 
-  font-weight: 700; 
-  line-height: 23px; 
+  font-family: "Playfair Display", serif; 
+  font-size: 50px; 
+  font-weight: bolder; 
+  line-height: 25px; 
+  color: var(--red);
+  text-transform: uppercase;
 }
 
 h2 { 
-  font-size: 18px; 
+  font-family: "Monsterrat", sans-serif; 
+  font-size: 22px; 
+  font-weight: 400; 
+  line-height: 30px; 
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h3 { 
-  font-size: 16px; 
+  font-family: "Monsterrat", sans-serif; 
+  font-size: 20px; 
+  font-weight: 700; 
+  line-height: 25px; 
+  text-transform: uppercase;
 }
 
 h4 { 
-  font-size: 14px;  
+  font-family: "Monsterrat", sans-serif; 
+  font-size: 18px; 
+  font-weight: 700; 
+  line-height: 25px; 
 }
 
 p { 
-  font-size: 12px; 
+  font-family: "Monsterrat", sans-serif; 
+  font-size: 16px; 
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 22px;
+  margin: auto;
 }
 
 /* Header & Navigation Styling */
@@ -73,15 +62,22 @@ nav {
   margin: 0 auto;
 }
 
-nav, section > div {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 header {
   width: 100%;
   background-color: var(--gray);
   position: sticky;
+  display: flex;
+}
+
+.hop-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0%;
+}
+
+nav.menu {
   display: flex;
 }
 
@@ -100,16 +96,75 @@ header ul li {
   font-size: 18px;
 } 
 
+.social-sidebar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.instagram-logo {
+  padding: 10%;
+}
+
+.facebook-logo {
+  padding: 10%;
+  margin: 0 20% 0 0;
+}
+
 /* Banner Styling */
-.banner {
+.banner-home {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: top;
   height: 650px;
-  background-image: url('/crafty_hop_assets/home-beer.jpg');
   background-position: center;
+  background-image: url('/crafty_hop_assets/home-beer.jpg');
   background-size: cover;
+}
+
+.banner-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-position: center;
+  background-image: url('/crafty_hop_assets/about-beer.jpg');
+  background-size: cover;
+  background-position-y: 95%;
+}
+
+.banner-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-position: center;
+  background-image: url('/crafty_hop_assets/search-beer.jpg');
+  background-size: cover;
+  background-position-y: 95%;
+}
+
+/* About Styling */
+.about {
+  margin: 5%;
+}
+
+/* Search Styling */
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.search-logo {
+  max-height: 80%;
 }
 
 /* Button Styling */
@@ -117,7 +172,6 @@ button {
   background-color: var(--yellow);
   border: none;
   border-radius: 6px;
-  padding: 12px 24px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.2rem;
@@ -136,11 +190,6 @@ a:hover, a:focus {
   color: var(--beige);
 }
 
-.hop-btn {
-  display: flex;
-  padding: 10px 20px;
-  display: none;
-}
 
 /* Footer Styling */
 footer {
@@ -151,17 +200,25 @@ footer {
   font-weight: 350;
   text-transform: uppercase;
   color: var(--gold);
+  position: relative;
 }
 
 /* Tablet Styling */
 @media screen and (max-width: 1300px) {
-  .banner img {
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+  
+  .banner-home img, .banner-about img, .banner-search img, .search {
     height: auto;
     max-width: 100%;
   }
-  
-  .hop-btn {
-    display: block;
+
+  .social-sidebar {
+    display: none;
   }
 
   nav > ul {
@@ -173,23 +230,34 @@ footer {
     margin-right: 0;
   }
 
+  h1 {
+    font-size: 40px
+  }
+
+  h2 {
+    font-size: 20px
+  }
+  
   p {
-    font-size: 10px;
+    font-size: 14px;
+    margin: auto;
   }
 }
 
 /* Mobile Styling */
 @media screen and (max-width: 800px) {
-  .banner img {
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+
+  .banner-home img, .banner-about img, .banner-search img {
     height: auto;
     max-width: 100%;
   }
-  .hop-btn {
-    display: block;
-  }
-  header {
-    box-sizing: border-box;
-  }
+
   ul.hop-menu {
     display: flex;
     flex-direction: column;
@@ -219,12 +287,21 @@ footer {
     padding-bottom: 24px;
   }
 
-  footer > img {
-    max-width: 300px;
+  h1 {
+    font-size: 30px
   }
 
+  h2 {
+    font-size: 18px
+  }
+  
   p {
-    font-size: 8px;
+    font-size: 12px;
+    margin: auto;
+  }
+
+  footer > img {
+    max-width: 300px;
   }
 }
 
