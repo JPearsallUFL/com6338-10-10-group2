@@ -1,5 +1,4 @@
 /* Universal Styling */
-
 :root {
   --gray: #544E4E;
   --red: #863234;
@@ -56,6 +55,7 @@ p {
   margin: auto;
 }
 
+
 /* Header & Navigation Styling */
 nav {
   max-width: 1200px;
@@ -111,6 +111,161 @@ header ul li {
 .facebook-logo {
   padding: 10%;
   margin: 0 20% 0 0;
+}
+
+
+/* Banner Styling */
+.banner-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  height: 650px;
+  background-position: center;
+  background-image: url('/crafty_hop_assets/home-beer.jpg');
+  background-size: cover;
+}
+
+.banner-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-position: center;
+  background-image: url('/crafty_hop_assets/about-beer.jpg');
+  background-size: cover;
+  background-position-y: 95%;
+}
+
+.banner-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-position: center;
+  background-image: url('/crafty_hop_assets/search-beer.jpg');
+  background-size: cover;
+  background-position-y: 95%;
+}
+
+.banner-beer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-position: center;
+  background-image: url('/crafty_hop_assets/beers-page.jpg');
+  background-size: cover;
+  background-position-y: 95%;
+}
+
+
+/* Search Styling */
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.search-logo {
+  max-height: 80%;
+}
+
+
+/* Beer Styling */
+.beer {
+  margin: 5%;
+}
+
+/* About Styling */
+.about {
+  margin: 5%;
+}
+
+.container .text {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 20%;
+  width: 70%;
+  text-align: center;
+  color: white;
+  font-family: "Playfair Display"; 
+  font-weight: 700; 
+  line-height: 23px; 
+}
+
+.about-top h1 {
+  text-align: center;
+  color: white;
+  font-family: "Playfair Display"; 
+  font-size: 100px; 
+  font-weight: 700; 
+  line-height: 23px; 
+}
+
+.about-bottom p {
+  font-family: "Monsterrat", sans-serif; 
+  font-weight: 350;
+  margin-right: auto;
+  margin-left: 5%;
+  width: 70%;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  line-height: 1.5em;
+}
+
+.hop-red {
+  position: relative;
+  top: -50px;
+  margin-right: 90px;
+  float: right;
+}
+
+
+/* Button Styling */
+button {
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+a {
+  font-family: "Monsterrat", sans-serif; 
+  text-decoration: none;
+  color: var(--gold);
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--beige);
+}
+
+
+
+/* Footer Styling */
+footer {
+  background-color: var(--gray);
+  padding: 10px 0;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 350;
+  text-transform: uppercase;
+  color: var(--gold);
+  position: relative;
 }
 
 /* Hamburger Menu/Toggle Button Styling */
@@ -181,7 +336,111 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-@media only screen and (max-width : 992px){
+
+/* Tablet Styling */
+@media screen and (max-width: 1200px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #544E4E;
+    font-size: 20px;
+  }
+
+  .main_nav{
+    display: none;
+  }
+
+  .show_nav{
+    padding-top: 2%;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .main_nav li{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
+  }
+  
+  .navbar_toggle {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30px;
+    color: #ffffff;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .logo_header{
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 2%;
+  }
+  
+  .banner-home img, .banner-about img, .banner-search img, .search {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .social-sidebar {
+    display: flex;
+  }
+
+  .hop-red {
+  position: relative;
+  top: -50px;
+  margin-right: 90px;
+  float: right;
+}
+
+  h1 {
+    font-size: 40px
+  }
+
+  h2 {
+    font-size: 20px
+  }
+  
+  p {
+    font-size: 14px;
+    margin: auto;
+  }
+}
+
+
+/* Mobile Styling */
+@media screen and (max-width: 400px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+
+  .banner-home img, .banner-about img, .banner-search img {
+    height: auto;
+    max-width: 100%;
+  }
 
   .navbar{
     display: flex;
@@ -234,182 +493,6 @@ a:hover, a:focus {
     margin-right: 2%;
   }
 
-} 
-
-/* Banner Styling */
-.banner-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: top;
-  height: 650px;
-  background-position: center;
-  background-image: url('/crafty_hop_assets/home-beer.jpg');
-  background-size: cover;
-}
-
-.banner-about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  background-position: center;
-  background-image: url('/crafty_hop_assets/about-beer.jpg');
-  background-size: cover;
-  background-position-y: 95%;
-}
-
-.banner-search {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  background-position: center;
-  background-image: url('/crafty_hop_assets/search-beer.jpg');
-  background-size: cover;
-  background-position-y: 95%;
-}
-
-/* About Styling */
-.about {
-  margin: 5%;
-}
-
-/* Search Styling */
-.search {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.search-logo {
-  max-height: 80%;
-}
-
-/* Button Styling */
-button {
-  background-color: var(--yellow);
-  border: none;
-  border-radius: 6px;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: 100ms;
-}
-
-a {
-  font-family: "Monsterrat", sans-serif; 
-  text-decoration: none;
-  color: var(--gold);
-}
-
-a:hover, a:focus {
-  text-decoration: underline;
-  color: var(--beige);
-}
-
-
-/* Footer Styling */
-footer {
-  background-color: var(--gray);
-  padding: 10px 0;
-  font-size: 12px;
-  text-align: center;
-  font-weight: 350;
-  text-transform: uppercase;
-  color: var(--gold);
-  position: relative;
-}
-
-/* Tablet Styling */
-@media screen and (max-width: 1300px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-  }
-  
-  .banner-home img, .banner-about img, .banner-search img, .search {
-    height: auto;
-    max-width: 100%;
-  }
-
-  .social-sidebar {
-    display: none;
-  }
-
-  nav > ul {
-    display: none;
-    justify-content: space-between;
-  }
-
-  nav > ul > li {
-    margin-right: 0;
-  }
-
-  h1 {
-    font-size: 40px
-  }
-
-  h2 {
-    font-size: 20px
-  }
-  
-  p {
-    font-size: 14px;
-    margin: auto;
-  }
-}
-
-/* Mobile Styling */
-@media screen and (max-width: 800px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-  }
-
-  .banner-home img, .banner-about img, .banner-search img {
-    height: auto;
-    max-width: 100%;
-  }
-
-  ul.hop-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    transform: translateY(-50%) scaleY(0);
-    width: 100%;
-    background-color: var(--yellow);
-    transition: transform 100ms;
-    padding: 0;
-  }
-  ul.hop-menu.show-menu {
-    transform: none;
-  }
-  ul.hop-menu li {
-    opacity: 0;
-    padding: 6px 0;
-    margin: 0;
-    text-align: center;
-    font-weight: 500;
-    visibility: hidden;
-  }
-  nav ul.hop-menu.show-menu li {
-    visibility: visible;
-    animation: fade-in 100ms ease 100ms 1 forwards;
-  }
-  ul.hop-menu li:last-child {
-    padding-bottom: 24px;
-  }
-
   h1 {
     font-size: 30px
   }
@@ -432,48 +515,4 @@ footer {
   to {
     opacity: 1;
   }
-}
-
-/*About Styling*/
-.container .text {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 20%;
-  width: 70%;
-  text-align: center;
-  color: white;
-  font-family: "Playfair Display"; 
-  font-weight: 700; 
-  line-height: 23px; 
-}
-
-.about-top h1 {
-  text-align: center;
-  color: white;
-  font-family: "Playfair Display"; 
-  font-size: 100px; 
-  font-weight: 700; 
-  line-height: 23px; 
-}
-
-.about-bottom p {
-  font-family: "Monsterrat", sans-serif; 
-  font-weight: 350;
-  margin-right: auto;
-  margin-left: 5%;
-  width: 70%;
-  text-align: left;
-  font-size: 18px;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  line-height: 1.5em;
-}
-
-.hop-red {
-  position: relative;
-  top: -50px;
-  margin-right: 90px;
-  float: right;
 }
