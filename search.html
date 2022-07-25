@@ -14,16 +14,29 @@
 <body>
     <header>
         <div class="hop-logo">
-            <button class="hop-btn" aria-expanded="false" aria-controls="main-menu">
-            <img src="crafty_hop_assets/hop-logo-mark.png" alt="The Crafty Hop Hunter Logo" width="200" height="150"></button>
+            <img class="hop-circle-logo" src="crafty_hop_assets/hop-logo-mark.png" alt="The Crafty Hop Hunter Logo" width="200" height="150">
         </div>
-        <nav class="menu" role="navigation" aria-label="Main menu">  
-            <ul class="hop-menu" id="main-menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="search.html">SEARCH</a></li>
-                <li><a href="#">EVENTS</a></li>
-                <li><a href="#">BEER</a></li>
-                <li><a href="about.html">ABOUT</a></li>
+        <nav class="navbar">
+            <div class="logo_header">
+              <a href="#" class="logo"></a>
+              <button class="navbar_toggle">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+            
+            <ul class="main_nav">
+              <li>
+                <a href="index.html" class="nav_links">HOME</a>
+              </li>
+              <li>
+                <a href="search.html" class="nav_links">SEARCH</a>
+              </li>
+              <li>
+                <a href="beer.html" class="nav_links">BEER</a>
+              </li>
+              <li>
+                <a href="about.html" class="nav_links">ABOUT</a>
+              </li>
             </ul>
         </nav>
         <div class="social-sidebar">
@@ -40,7 +53,8 @@
             <img src="crafty_hop_assets/hop-logo-main.png" alt="The Crafty Hop Hunter Full Logo" width="800" height="250">
         </div>
         <section class="search">
-            <h1>Search</h1>
+            <br>
+            <br>
             <h2>Find the nearest brewery with just one tap.</h2>
             <img src="/crafty_hop_assets/hop-logo-red.png" class="search-logo" alt="The Crafty Hop Hunter Search Logo" width="300" height="225"> 
                 <form>
